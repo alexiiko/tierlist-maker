@@ -1,6 +1,8 @@
 <script lang="ts">
   let tiers = ["S", "A", "B", "C", "D"];
   let stripLength = tiers.length
+
+  //todo: make importing of files possible, change the css so that the whole vertical space gets used, change colors, style the buttons
 </script>
 
 <main>
@@ -32,31 +34,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
 <style>
+  :root{
+    --height: 200px;
+  }
+
   main{
     font-family: "Roboto", sans-serif;
   }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 13fr;
-  grid-gap: 0px;
-}
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    grid-gap: 0px;
+    height: 100vh;
+  }
 
-.box {
-  width: 150px;
-  height: 150px;
-  border: solid 2px black;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .box {
+    width: var(--height);
+    height: var(--height);
+    border: solid 2px black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.stripe {
-  width: 100%;
-  height: 150px;
-  border: solid 2px black;
-  background-color: lightgrey;
-  margin: 0px;
-}
+  .stripe {
+    width: 100%;
+    height: var(--height);
+    border: solid 2px black;
+    background-color: lightgrey;
+    margin: 0px;
+  }
 </style>
